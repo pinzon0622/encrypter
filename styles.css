@@ -1,0 +1,11 @@
+textarea{
+    resize: none;
+}
+
+.container__output__start{
+    background-color: aqua;
+}
+
+.container__output__end{
+    display: none;
+}
