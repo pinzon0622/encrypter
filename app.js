@@ -17,7 +17,7 @@ const encryptRules ={
 
 function revealEnd() {
     document.getElementById("start").style.display = "none";
-    document.getElementById("end").style.display = "block";
+    document.getElementById("end").style.display = "flex";
 }
 
 function encrypt(){
