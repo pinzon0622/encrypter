@@ -10,10 +10,7 @@
     --font: 'Inter', sans-serif;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-}
+
 
 body{
     background-color: var(--color-background);
@@ -23,23 +20,90 @@ body{
 .container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    
 }
 
 .container__input{
+    width: 80%;
+    height: 650px;
+    background-color: var(--color-background);
+    margin: 20px;
+}
 
+.container__input__area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;    
+    width: 80%;
+    height: 90%;
+    background-color: var(--color-background);
+    margin-left: 15%;
 } 
+
+#text{
+    width: 100%;
+    height: 80%;
+    background-color: var(--color-background);
+    font: 400 2rem var(--font);
+    color: var(--color-darkBlue);
+    resize: none; 
+    border: none;
+    border-radius: 8px;
+}
+
+#text::placeholder{
+    color: var(--color-darkBlue);
+}
+
+.container__input__area__text{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin-right: auto;
+    font-size: 0.8rem;
+    color: var(--color-darkGray);
+}
+
+.container__input__area__buttons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: var(--color-background);
+    gap: 40px;
+}
+
+.button__encrypt{
+    width: 328px;
+    height: 67px;
+    background-color: var(--color-darkBlue);
+    color: white;
+    border: none;
+    border-radius: 24px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.button__decrypt{
+    width: 328px;
+    height: 67px;
+    background-color: var(--color-ligthGray);
+    color: var(--color-darkBlue);
+    border: #0a3871 1px solid;
+    border-radius: 24px;
+    font-size: 1rem;
+    cursor: pointer;
+}
 
 .container__output{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 400px;
+    width: 27%;
     height: 650px;
     background-color: white;
     border-radius: 32px;
     margin: 20px;
+    box-shadow: 0px 10px 10px 10px rgba(0,0,0,0.1);
 }
 
 .container__output__start{
@@ -69,7 +133,7 @@ p{
 }
 
 .button__copy{
-    width: 336px;
+    width: 95%;
     height: 67px;
     background-color: white;
     color: var(--color-darkBlue);
@@ -77,7 +141,7 @@ p{
     border-radius: 24px;
     font-size: 1rem;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #resultArea{
@@ -85,9 +149,9 @@ p{
     border: none;
     background-color: white;
     color: var(--color-darkGray);
-    width: 336px;
+    width: 95%;
     height: 80%;
-    margin: 20px;
+    margin: 25px;
     font: 400 1.5rem var(--font);
 }
 
@@ -98,4 +162,184 @@ p{
     justify-content: space-between;
     width: 100%;
     height: 100%;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-darkBlue);
+    font-size: 1rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo{
+        margin-bottom: 30px;
+        padding: 0;
+    }
+
+    .container__input{
+        width: 90%;
+        height: 650px;
+        background-color: var(--color-background);
+    
+    }
+
+    .container__input__area{
+        width: 90%;
+        height: 90%;
+        background-color: var(--color-background);
+        justify-content: center;
+        align-items: center;
+        margin-left: 5%;
+    }
+
+    #text{
+        width: 100%;
+        height: 80%;
+        font: 400 2rem var(--font);
+        color: var(--color-darkBlue);
+        resize: none; 
+        border: none;
+        border-radius: 8px;
+    }
+
+    .container__output{
+        width: 80%;
+        height: auto;
+        background-color: white;
+        border-radius: 32px;
+        margin: 20px;
+        box-shadow: 0px 10px 10px 10px rgba(0,0,0,0.1);
+    }
+
+    .container__output__end{
+        width: 100%;
+        height: 340px;
+        margin: 30px;
+    }
+
+    #resultArea{
+        width: 95%;
+        height: 90%;
+        font: 400 1.5rem var(--font);
+    }
+
+    .button__copy{
+        width: 95%;
+    }
+
+    .output__image{
+        display: none;
+    }
+    .container__input__area__text{
+        width: 80%;
+        margin-right: auto;
+        font-size: 0.8rem;
+        color: var(--color-darkGray);
+    }
+
+    
+}
+
+@media (max-width: 599px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo{
+        margin-bottom: 30px;
+        padding: 0;
+    }
+
+    .container__input{
+        width: 90%;
+        height: 650px;
+        background-color: var(--color-background);
+    
+    }
+
+    .container__input__area{
+        width: 90%;
+        height: 90%;
+        background-color: var(--color-background);
+        justify-content: center;
+        align-items: center;
+        margin-left: 5%;
+    }
+
+    .container__input__area__text{
+        width: 80%;
+        margin-right: auto;
+        font-size: 0.6rem;
+        color: var(--color-darkGray);
+    }
+
+    .container__input__area__buttons{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button__encrypt{
+        width: 80%;
+    }
+
+    .button__decrypt{
+        width: 80%;
+    }
+
+    #text{
+        width: 100%;
+        height: 80%;
+        font: 400 2rem var(--font);
+        color: var(--color-darkBlue);
+        resize: none; 
+        border: none;
+        border-radius: 8px;
+    }
+
+    .container__output{
+        width: 80%;
+        height: auto;
+        background-color: white;
+        border-radius: 32px;
+        margin: 20px;
+        box-shadow: 0px 10px 10px 10px rgba(0,0,0,0.1);
+    }
+
+    .container__output__end{
+        width: 100%;
+        height: 340px;
+        margin: 30px;
+    }
+
+    #resultArea{
+        width: 95%;
+        height: 90%;
+        font: 400 1.5rem var(--font);
+    }
+
+    .button__copy{
+        width: 95%;
+    }
+
+    .output__image{
+        display: none;
+    }
 }

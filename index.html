@@ -10,19 +10,20 @@
 
     <main class="container">
         <section class="container__input">
-            <img src="img/Logo.png" alt="">
+            <img class="logo" src="img/Logo.png" alt="">
             <div class="container__input__area">
                 <textarea name="xd" id="text" placeholder="Ingrese el texto aquí"></textarea>
-                <p><img src="img/bi_exclamation-circle-fill.png" alt="">Solo letras minusculas y sin acentos </p>
+                <div class="container__input__area__text"><img src="img/bi_exclamation-circle-fill.png" alt="">Solo letras minusculas y sin acentos </div>
+                <hr>
                 <div class="container__input__area__buttons">
-                    <button onclick="encrypt()" >Encriptar</button>
-                    <button onclick="decrypt()">Desencriptar</button>
+                    <button class="button__encrypt" onclick="encrypt()" >Encriptar</button>
+                    <button class="button__decrypt" onclick="decrypt()">Desencriptar</button>
                 </div>
             </div>
         </section>
         <section class="container__output">
             <div class="container__output__start" id="start">
-                <img src="img/Muñeco.png" alt="">
+                <img class="output__image" src="img/Muñeco.png" alt="">
                 <div class="container__output__start__text">
                     <h2>Ningun mensaje fue encontrado</h2>
                     <p>Ingresa el texto que deseas encriptar o desencriptar</p>
@@ -35,6 +36,7 @@
         </section>
     </main>
     <footer>
+        <p><a href="https://www.linkedin.com/in/mateo-pinzón-sánchez-242b79313/" target="_blank">Hecho por Mateo Pinzón</a></p>
     </footer>
     <script src="app.js"></script>
 </body>
